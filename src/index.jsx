@@ -4,4 +4,5 @@ import App from './App';
 
 import './index.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+const params = new URLSearchParams(window.location.search);
+ReactDOM.render(<App model={params.get('model')}/>, document.getElementById('root'));
