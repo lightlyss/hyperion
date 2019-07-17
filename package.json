@@ -1,0 +1,44 @@
+{
+  "name": "hyperion",
+  "version": "0.1.0",
+  "description": "Battleship registered to Schicksal's fareast branch",
+  "main": "src/index.jsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "prebuild": "rm -rf build docs",
+    "build": "react-scripts build",
+    "postbuild": "mv build docs",
+    "test": "react-scripts test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightlyss/hyperion.git"
+  },
+  "keywords": [
+    "mmd"
+  ],
+  "author": "lightlyss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lightlyss/hyperion/issues"
+  },
+  "homepage": ".",
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.0.1",
+    "three": "0.106.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
