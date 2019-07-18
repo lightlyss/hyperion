@@ -2,6 +2,7 @@ import React from 'react';
 import * as THREE from 'three';
 import { MMDLoader } from 'three/examples/jsm/loaders/MMDLoader';
 import { MMDAnimationHelper } from 'three/examples/jsm/animation/MMDAnimationHelper';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 class Frame extends React.Component {
   componentDidMount() {
@@ -49,6 +50,7 @@ class Frame extends React.Component {
     this.renderer.setClearColor('#000000');
     this.renderer.setSize(width, height);
     this.mount.appendChild(this.renderer.domElement);
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
 
     // Model
     this.helper = new MMDAnimationHelper({afterglow: 2.0});
