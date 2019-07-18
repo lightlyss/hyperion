@@ -1,6 +1,7 @@
 # Hyperion
 A React app that renders MMD models of Houkai3rd's valkyries (and anyone else I guess?)
-powered by three.js and ammo.js.
+powered by three.js and ammo.js. Model selection is currently supported by
+query strings such as https://lightlyss.github.io/hyperion?model=seele and so on.
 
 ## Development
 `npm start` to run a dev server at port `3000`.
