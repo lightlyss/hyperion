@@ -19,6 +19,17 @@ class Frame extends React.Component {
     document.body.appendChild(script);
   }
 
+  makePhongMaterials(materials) {
+    let array = [];
+    for (let i = 0; i < materials.length; i++) {
+      let m = new THREE.MeshPhongMaterial();
+      m.copy(materials[i]);
+      m.needsUpdate = true;
+      array.push(m);
+    }
+    return array;
+  }
+
   loadThree() {
     const width = this.mount.clientWidth;
     const height = this.mount.clientHeight;
@@ -32,7 +43,7 @@ class Frame extends React.Component {
 
     // Scene
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0xffffff);
+    this.scene.background = new THREE.Color(0xd1cdb7);
 
     this.gridHelper = new THREE.PolarGridHelper(30, 10);
     this.gridHelper.position.y = -10;
@@ -60,6 +71,7 @@ class Frame extends React.Component {
       this.mesh.position.x = this.props.modelX || 0;
       this.mesh.position.y = this.props.modelY || -10;
       this.mesh.position.z = this.props.modelZ || 0;
+      this.mesh.material = this.makePhongMaterials(this.mesh.material);
       this.scene.add(this.mesh);
       this.helper.add(this.mesh, {animation: model.animation, physics: true});
 
