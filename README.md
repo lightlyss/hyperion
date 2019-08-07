@@ -12,6 +12,7 @@ and ammo.js. Model selection is currently supported by query strings.
 | Wendy | https://lightlyss.github.io/hyperion?model=wendy |
 | Seele Vollerei | https://lightlyss.github.io/hyperion?model=seele |
 | Liliya Olenyeva | https://lightlyss.github.io/hyperion?model=liliya |
+| Rozaliya Olenyeva | https://lightlyss.github.io/hyperion?model=rozaliya |
 
 ## Development
 `npm start` to run a dev server at port `3000`.
