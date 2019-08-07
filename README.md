@@ -1,12 +1,22 @@
+[![Build Status](https://travis-ci.org/lightlyss/hyperion.svg?branch=master)](https://travis-ci.org/lightlyss/hyperion)
 # Hyperion
-A React app that renders MMD models of Houkai3rd's valkyries (and anyone else I guess?)
-powered by three.js and ammo.js. Model selection is currently supported by
-query strings such as https://lightlyss.github.io/hyperion?model=seele and so on.
+![banner](banner.png)
+> Eye of Providence, House Apocalypse
+
+## Description
+A React app that renders MMD models of Houkai3rd's valkyries, powered by three.js
+and ammo.js. Model selection is currently supported by query strings.
+
+| Model | URL |
+|:-----:|:---:|
+| Wendy | https://lightlyss.github.io/hyperion?model=wendy |
+| Seele Vollerei | https://lightlyss.github.io/hyperion?model=seele |
+| Liliya Olenyeva | https://lightlyss.github.io/hyperion?model=liliya |
 
 ## Development
 `npm start` to run a dev server at port `3000`.
 
-## Deployment
+## Building
 `npm run build` to generate a production build.
 
 ## Disclaimer
