@@ -4,6 +4,13 @@ import { MMDLoader } from 'three/examples/jsm/loaders/MMDLoader';
 import { MMDAnimationHelper } from 'three/examples/jsm/animation/MMDAnimationHelper';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+const Mat = {
+  TOON: 0,
+  STD: 1,
+  PHYS: 2,
+  PHONG: 3
+};
+
 class Frame extends React.Component {
   componentDidMount() {
     const script = document.createElement('script');
@@ -19,10 +26,23 @@ class Frame extends React.Component {
     document.body.appendChild(script);
   }
 
-  makePhongMaterials(materials) {
+  convertMaterials(materials, matType) {
     let array = [];
     for (let i = 0; i < materials.length; i++) {
-      let m = new THREE.MeshPhongMaterial();
+      let m = null;
+      switch (matType) {
+        case Mat.TOON:
+          m = new THREE.MeshToonMaterial();
+          break;
+        case Mat.STD:
+          m = new THREE.MeshStandardMaterial();
+          break;
+        case Mat.PHYS:
+          m = new THREE.MeshPhysicalMaterial();
+          break;
+        default:
+          m = new THREE.MeshPhongMaterial();
+      }
       m.copy(materials[i]);
       m.needsUpdate = true;
       array.push(m);
@@ -71,7 +91,7 @@ class Frame extends React.Component {
       this.mesh.position.x = this.props.modelX || 0;
       this.mesh.position.y = this.props.modelY || -10;
       this.mesh.position.z = this.props.modelZ || 0;
-      this.mesh.material = this.makePhongMaterials(this.mesh.material);
+      this.mesh.material = this.convertMaterials(this.mesh.material, Mat.PHONG);
       this.scene.add(this.mesh);
       this.helper.add(this.mesh, {animation: model.animation, physics: true});
 

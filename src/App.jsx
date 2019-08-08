@@ -7,6 +7,10 @@ class App extends React.Component {
       model={'liliya'}
       motions={['wavefile']}
     />;
+    if (this.props.model === 'rozaliya') return <Frame
+      model={'rozaliya'}
+      motions={['wavefile']}
+    />;
     if (this.props.model === 'seele') return <Frame
       model={'seele'}
       motions={['senbonzakura']}
