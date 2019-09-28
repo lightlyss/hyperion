@@ -1,6 +1,6 @@
 {
   "name": "hyperion",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Battleship registered to Schicksal's fareast branch",
   "main": "src/index.jsx",
   "scripts": {
@@ -27,7 +27,8 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.0.1",
-    "three": "0.106.2"
+    "three": "0.106.2",
+    "yorha": "lightlyss/yorha#v1.2.1"
   },
   "browserslist": {
     "production": [
