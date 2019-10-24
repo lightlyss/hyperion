@@ -1,0 +1,29 @@
+name: build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Build React app
+      run: |
+        npm ci
+        npm run build --if-present
+      env:
+        CI: true
+    - name: Test React build
+      run: |
+        npm i -g node-static@0.7.11
+        static docs -p 3000 &
+        npm test
+      env:
+        CI: true

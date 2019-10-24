@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/lightlyss/hyperion.svg?branch=master)](https://travis-ci.org/lightlyss/hyperion)
+[![Build Status](https://github.com/lightlyss/hyperion/workflows/build/badge.svg)](https://github.com/lightlyss/hyperion)
+[![Deploy Status](https://github.com/lightlyss/hyperion/workflows/deployment/badge.svg)](https://github.com/lightlyss/hyperion)
 # Hyperion
 ![banner](banner.png)
 > Eye of Providence, House Apocalypse
