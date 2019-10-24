@@ -1,6 +1,6 @@
 {
   "name": "hyperion",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Battleship registered to Schicksal's fareast branch",
   "main": "src/index.jsx",
   "scripts": {
@@ -8,7 +8,7 @@
     "prebuild": "rm -rf build docs",
     "build": "react-scripts build",
     "postbuild": "mv build docs",
-    "test": "react-scripts test"
+    "test": "CI=true react-scripts test"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,10 @@
     "react-dom": "16.8.6",
     "react-scripts": "3.0.1",
     "three": "0.106.2",
-    "yorha": "lightlyss/yorha#v1.2.1"
+    "yorha": "lightlyss/yorha#v1.2.2"
+  },
+  "devDependencies": {
+    "puppeteer": "1.20.0"
   },
   "browserslist": {
     "production": [
