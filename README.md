@@ -5,8 +5,8 @@
 > Eye of Providence, House Apocalypse
 
 ## Description
-A React app that renders MMD models of Houkai3rd's valkyries, powered by three.js
-and ammo.js. Model selection is currently supported by query strings.
+A React app that renders MMD models of Houkai3rd's valkyries, powered by `three.js`
+and `ammo.js`. Model selection is currently supported by query strings.
 
 | Model | URL |
 |:-----:|:---:|
@@ -16,7 +16,7 @@ and ammo.js. Model selection is currently supported by query strings.
 | Rozaliya Olenyeva | https://lightlyss.github.io/hyperion?model=rozaliya |
 
 ## Development
-`npm start` to run a dev server at port `3000`.
+`npm start` to run a dev server at port `3000`. `npm test` to run a brief integration test.
 
 ## Building
 `npm run build` to generate a production build.
